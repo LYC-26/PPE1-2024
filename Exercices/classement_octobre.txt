@@ -1,0 +1,15 @@
+  57 Canada
+  59 Chine
+  61 Europe
+  63 Royaume-Uni
+  76 Turquie
+  77 Allemagne
+  78 Champs-Élysées
+  83 Italie
+  97 Syrie
+ 106 Rio
+ 113 Russie
+ 139 Burundi
+ 189 États-Unis
+ 297 Paris
+ 703 France
