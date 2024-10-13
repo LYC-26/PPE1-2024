@@ -1,0 +1,25 @@
+mkdir Exercices
+touch Exercices/pipelines.txt
+touch comptes.txt
+find 2016 -type f -name "*.ann" | wc -l
+echo "Annotations en 2016: 571" >> comptes.txt
+find ~/Exercice1/ann/2017 -type f -name "*.ann" | wc -l
+echo "Annotations en 2017: 393" >> comptes.txt
+find ~/Exercice1/ann/2018 -type f -name "*.ann" | wc -l
+echo "Annotations en 2018: 227" >> comptes.txt
+touch locacations.txt
+count_locations=$(cat ~/Exercice1/ann/2016/*/*.ann | grep "Location" | wc -l)
+echo "Locations en 2016: $count_locations" >> locations.txt
+count_locations=$(cat ~/Exercice1/ann/2017/*/*.ann | grep "Location" | wc -l)
+echo "Locations en 2017: $count_locations" >> locations.txt
+count_locations=$(cat ~/Exercice1/ann/2018/*/*.ann | grep "Location" | wc -l)
+echo "Locations en 2018: $count_locations" >> locations.txt
+touch classement_2016.txt
+touch classement_2017.txt
+touch classement_2018.txt
+cat ~/Exercice1/ann/2016/*/*.ann | grep "Location" | cut -f3 | sort | uniq -c | sort -nr | head -n 15 | sort -n >> classement_2016.txt
+cat ~/Exercice1/ann/2017/*/*.ann | grep "Location" | cut -f3 | sort | uniq -c | sort -nr | head -n 15 | sort -n >> classement_2017.txt
+cat ~/Exercice1/ann/2018/*/*.ann | grep "Location" | cut -f3 | sort | uniq -c | sort -nr | head -n 15 | sort -n >> classement_2018.txt
+touch classement_octobre.txt
+cat ~/Exercice1/ann/*/*/*.ann | grep "Location" | cut -f3 | sort | uniq -c | sort -nr | head -n 15 | sort -n >> classement_octobre.txt
+
