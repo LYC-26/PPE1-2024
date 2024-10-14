@@ -3,8 +3,6 @@
 Aujourd'hui, j'ai organisé les points de connaissance du cours 2 et pratiqué comment utiliser Git.
 
 nothing special
-nothing special
-nothing special
 
 # 14/10/2024 (Cette ligne doit rester après correction)
 # Séance 3
