@@ -2,6 +2,9 @@
 ## Travail sur Git et la manipulation de fichiers
 Aujourd'hui, j'ai organisé les points de connaissance du cours 2 et pratiqué comment utiliser Git.
 
+nothing special
+nothing special
+nothing special
 # Séance 3
 ## pipelines
 Hier après-midi, j’ai passé plusieurs heures à terminer le devoir sur les 
