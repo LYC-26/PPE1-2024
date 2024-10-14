@@ -7,7 +7,7 @@ find ~/Exercice1/ann/2017 -type f -name "*.ann" | wc -l
 echo "Annotations en 2017: 393" >> comptes.txt
 find ~/Exercice1/ann/2018 -type f -name "*.ann" | wc -l
 echo "Annotations en 2018: 227" >> comptes.txt
-touch locacations.txt
+touch locations.txt
 count_locations=$(cat ~/Exercice1/ann/2016/*/*.ann | grep "Location" | wc -l)
 echo "Locations en 2016: $count_locations" >> locations.txt
 count_locations=$(cat ~/Exercice1/ann/2017/*/*.ann | grep "Location" | wc -l)
