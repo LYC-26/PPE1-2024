@@ -6,7 +6,7 @@ nothing special
 nothing special
 nothing special
 
-14/10/2024 (Cette ligne doit rester après correction)
+#14/10/2024 (Cette ligne doit rester après correction)
 # Séance 3
 ## pipelines
 Hier après-midi, j’ai passé plusieurs heures à terminer le devoir sur les 
