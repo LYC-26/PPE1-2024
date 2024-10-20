@@ -54,3 +54,30 @@ Je vais mettre cette ligne de côté.
 J'espère pouvoir clarifier cette confusion par la suite. 
 correction d’erreurs
 >>>>>>> 2f1e370bcd320fd0e7fb83f44f8fbc757531cdcb
+
+# Séance 4
+## Le foctionnement du code de la dernière diapo
+Ce script Bash est utilisé pour vérifier si chaque ligne d'un fichier 
+correspond à un format d'URL valide. Lors de l'exécution, l'utilisateur 
+doit passer le nom d'un fichier contenant des URL comme argument au 
+script. Si le nombre d'arguments passés n'est pas égal à 1, le script 
+affichera "ce programme demande un argument" et se terminera. Ensuite, le 
+script initialise deux calculatrices (OK et NOK) à 0 pour compter les URL 
+valides et invalides. À l'aide d'une boucle while, il lit le contenu du 
+fichier ligne par ligne et utilise une expression régulière pour vérifier 
+si chaque ligne commence par http:// ou https://. Si c'est le cas, la 
+calculqtrice OK est incrémentée ; sinon, l'autre calculatrice NOK est 
+incrémentée. 
+Enfin, le script affiche le nombre d'URL valides et le nombre de lignes 
+douteuses.
+
+## scripts
+Grâce au script, je peux voir plus clairement quelles commandes j'ai 
+effectivement exécutées. Bien que la commande `history` puisse également 
+être utilisée dans l'environnement zsh pour voir les commandes, un fichier 
+script peut présenter ces informations de manière plus claire sur une 
+seule page, notamment grâce à l'indentation, qui montre les relations 
+entre les différentes boucles. Cela me permet également de trouver plus 
+rapidement la raison pour laquelle une commande ne fonctionne pas, me 
+permettant ainsi de corriger les erreurs en temps utile et d'améliorer mon 
+efficacité au travail.
