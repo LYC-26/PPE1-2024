@@ -83,6 +83,13 @@ permettant ainsi de corriger les erreurs en temps utile et d'améliorer mon
 efficacité au travail.
 
 # Séance 6
+## `cat` et `while read -r`
+`while read -r` est plus efficace que `cat`, car cela peut éviter de créer 
+un nouveau processus et permettre de mieux traiter les espaces et les 
+caractères spécieux, garantissant ainsi une lecture complète du fichier 
+ligne par ligne.
+
+##miniprojet1
 La programmation est vraiment un travail qui demande beaucoup de soin et de 
 patience ! Par exemple, dès la première étape, j'ai oublié de remplacer le nom 
 du fichier par le paramètre ` $1 `, ce qui a empêché le code de s'exécuter. 
