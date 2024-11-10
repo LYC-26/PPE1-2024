@@ -81,3 +81,15 @@ entre les différentes boucles. Cela me permet également de trouver plus
 rapidement la raison pour laquelle une commande ne fonctionne pas, me 
 permettant ainsi de corriger les erreurs en temps utile et d'améliorer mon 
 efficacité au travail.
+
+# Séance 6
+La programmation est vraiment un travail qui demande beaucoup de soin et de 
+patience ! Par exemple, dès la première étape, j'ai oublié de remplacer le nom 
+du fichier par le paramètre ` $1 `, ce qui a empêché le code de s'exécuter. 
+Mais comme j'étais trop pressée, je n'ai pas remarqué cette erreur et j'y suis 
+restée bloquée pendant un long moment. Ensuite, j'ai aussi oublié d'ajouter ` > 
+"$output_file" `, ce qui empêchait d’ajouter l’en-tête dans le fichier 
+tableau-fr.tsv. Et surtout, j'ai oublié d'ajouter ` >> "$output_file" ` à la 
+fin, ce qui faisait que les résultats ne s'importaient pas dans le fichier 
+`tableau-fr.tsv`. Je pensais que cet exercice ne serait pas très complexe, mais 
+à cause de mon manque d'attention, j'ai pris beaucoup de temps.
