@@ -8,18 +8,32 @@ fi
 
 echo "Le fichier à lire : $1"
 
-# Définir le chemin du fichier de sortie
-output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-fr.tsv"
+# Définir le chemin du fichier de sortie HTML
+output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-fr.html"
 
-# Ajouter l'en-tête du fichier
-echo -e "Numéro de ligne\tCode HTTP\tEncodage\tNombre de mots\tURL" > "$output_file"
+# Ajouter l'en-tête du fichier HTML
+echo "<html>" > "$output_file"
+echo "<head><title>Tableau des Données</title></head>" >> "$output_file"
+echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8
+echo "<body>" >> "$output_file"
+echo "<h1>Tableau des Données</h1>" >> "$output_file"
+echo "<table border='1'>" >> "$output_file"
+echo "<tr><th>Numéro de ligne</th><th>Code HTTP</th><th>Encodage</th><th>Nombre de mots</th><th>URL</th></tr>" >> "$output_file"
 
 # Initialiser un compteur de lignes
 line_number=1
 
+# Fonction pour échapper les caractères spéciaux pour le HTML
+escape_html() {
+    echo "$1" | sed -e 's/&/&amp;/g' -e 's/"/&quot;/g' -e 's/</&lt;/g' -e 's/>/&gt;/g'
+}
+
 # Lire les lignes du fichier et affichier chaque ligne avec ses numéro et code HTTP et l'encodage
 while read -r line
 do
+    # Echapper l'URL pour le HTML
+    escaped_url=$(escape_html "$line")
+    
     # Obtenir le code HTTP de la requête
     http_code=$(curl -o /dev/null -s -w "%{http_code}" "$line")
     
@@ -34,11 +48,16 @@ do
     # Obtenir le contenu de la page et compter les mots
     nombre_de_mot=$(curl -sL "$line" | wc -w)
     
-    # Afficher le numéro de ligne, le code HTTP, l'encodage, le nombre de mot et l'URL et ajouter le résultat dans le fichiers de sortie
-	echo -e "$line_number\t$http_code\t$encoding\t$nombre_de_mot\t$line" >> "$output_file"
+    # Ajouter une ligne dans le fichier HTML pour chaque URL
+	echo "<tr><td>$line_number</td><td>$http_code</td><td>$encoding</td><td>$nombre_de_mot</td><td><a href=\"$escaped_url\" target=\"_blank\">$escaped_url</a></td></tr>" >> "$output_file"
 	
 	# Incrémenter le compteur de lignes
 	((line_number++))
 done < "$1"
 
-echo "Le fichier tableau-fr.tsv a été généré avec succès dans $output_file."
+# Ajouter la fin du fichier HTML
+echo "</table>" >> "$output_file"
+echo "</body>" >> "$output_file"
+echo "</html>" >> "$output_file"
+
+echo "Le fichier tableau-fr.html a été généré avec succès dans $output_file."
