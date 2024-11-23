@@ -14,7 +14,7 @@ output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-f
 # Ajouter l'en-tête du fichier HTML
 echo "<html>" > "$output_file"
 echo "<head><title>Tableau des Données</title></head>" >> "$output_file"
-echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8
+echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8  # <meta charset=\"UTF-8\">  或 echo '<html>...<body>' 总之不能单纯用双引号
 echo "<body>" >> "$output_file"
 echo "<h1>Tableau des Données</h1>" >> "$output_file"
 echo "<table border='1'>" >> "$output_file"
@@ -31,6 +31,7 @@ escape_html() {
 # Lire les lignes du fichier et affichier chaque ligne avec ses numéro et code HTTP et l'encodage
 while read -r line
 do
+
     # Echapper l'URL pour le HTML
     escaped_url=$(escape_html "$line")
     
