@@ -100,3 +100,14 @@ tableau-fr.tsv. Et surtout, j'ai oublié d'ajouter ` >> "$output_file" ` à la
 fin, ce qui faisait que les résultats ne s'importaient pas dans le fichier 
 `tableau-fr.tsv`. Je pensais que cet exercice ne serait pas très complexe, mais 
 à cause de mon manque d'attention, j'ai pris beaucoup de temps.
+
+# Séance 8
+Dans cet exercice, j'ai rencontré principalement deux problèmes : 1. Lorsque je plaçais le 
+fichier index.html dans le répertoire programmes de miniprojet, la page GitHub ne générée 
+qu'une page contenant le fichier readme.md de mon dépôt PPE1-2024, donc je n'avais d'autre 
+choix que de placer index.html dans le répertoire racine du dépôt ; 2. Dans le fichier 
+miniproje.sh du dépôt distant, les styles CSS ne s'appliquaient pas à la table HTML, et 
+j'ai finalement découvert que cela était dû au fait que le fichier CSS et la sortie du 
+tableau HTML ne utilisaient pas de chemins relatifs. Donc, les chemins relatifs sont 
+vraiment très importants !!! (Dieu seul sait combien de temps j'ai passé à résoudre ce 
+problème T_T).
