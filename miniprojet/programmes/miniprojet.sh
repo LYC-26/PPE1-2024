@@ -15,7 +15,7 @@ output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-f
 echo "<html>" > "$output_file"
 echo "<head><title>Tableau des Données</title></head>" >> "$output_file"
 echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8  
-echo "<link rel='stylesheet' type='text/css' href='/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/programmes/style_tableau.css'>" >> "$output_file"
+echo "<link rel='stylesheet' type='text/css' href='../programmes/style_tableau.css'>" >> "$output_file"
 echo "<body>" >> "$output_file"
 echo "<h1>Tableau des Données</h1>" >> "$output_file"
 echo "<table>" >> "$output_file"
