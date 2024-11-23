@@ -14,10 +14,11 @@ output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-f
 # Ajouter l'en-tête du fichier HTML
 echo "<html>" > "$output_file"
 echo "<head><title>Tableau des Données</title></head>" >> "$output_file"
-echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8  # <meta charset=\"UTF-8\">  或 echo '<html>...<body>' 总之不能单纯用双引号
+echo "<meta charset='UTF-8'>" >> "$output_file"  # UTF-8  
+echo "<link rel='stylesheet' type='text/css' href='/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/programmes/style_tableau.css'>" >> "$output_file"
 echo "<body>" >> "$output_file"
 echo "<h1>Tableau des Données</h1>" >> "$output_file"
-echo "<table border='1'>" >> "$output_file"
+echo "<table>" >> "$output_file"
 echo "<tr><th>Numéro de ligne</th><th>Code HTTP</th><th>Encodage</th><th>Nombre de mots</th><th>URL</th></tr>" >> "$output_file"
 
 # Initialiser un compteur de lignes
