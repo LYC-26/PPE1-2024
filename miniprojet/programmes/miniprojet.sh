@@ -9,7 +9,7 @@ fi
 echo "Le fichier à lire : $1"
 
 # Définir le chemin du fichier de sortie HTML
-output_file="/Users/liuyongcan/Exercice2/PPE1-2024/miniprojet/tableaux/tableau-fr.html"
+output_file="../tableaux/tableau-fr.html"
 
 # Ajouter l'en-tête du fichier HTML
 echo "<html>" > "$output_file"
